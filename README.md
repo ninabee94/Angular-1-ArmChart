@@ -12,7 +12,7 @@ Using ArmChart to generate piechart & barchart, use bootstrap too
      ng new my-app
      npm install --save @amcharts/amcharts4
      
-<b>3. app.component.ts</b>
+<b>3. src/app/app.component.ts</b>
   
      import { Component, NgZone } from '@angular/core';
      import * as am4core from "@amcharts/amcharts4/core";
@@ -42,21 +42,53 @@ Using ArmChart to generate piechart & barchart, use bootstrap too
         }
 
         xycharts() {
-          this.zone.runOutsideAngular(() => {
-             var xychart = am4core.create("xychart", am4charts.XYChart);
-             xychart.data = this.xyvalue;           
-             var categoryAxis = xychart.xAxes.push(new am4charts.CategoryAxis());
-             categoryAxis.dataFields.category = "name";
-             categoryAxis.renderer.grid.template.location = 0;
-             categoryAxis.renderer.minGridDistance = 30;    
-             var valueAxis = xychart.yAxes.push(new am4charts.ValueAxis());
-             var series = xychart.series.push(new am4charts.ColumnSeries());
-             series.dataFields.valueY = "value";
-             series.dataFields.categoryX = "name";
-        });
+           this.zone.runOutsideAngular(() => {
+              var xychart = am4core.create("xychart", am4charts.XYChart);
+              xychart.data = this.xyvalue;           
+              var categoryAxis = xychart.xAxes.push(new am4charts.CategoryAxis());
+              categoryAxis.dataFields.category = "name";
+              categoryAxis.renderer.grid.template.location = 0;
+              categoryAxis.renderer.minGridDistance = 30;    
+              var valueAxis = xychart.yAxes.push(new am4charts.ValueAxis());
+              var series = xychart.series.push(new am4charts.ColumnSeries());
+              series.dataFields.valueY = "value";
+              series.dataFields.categoryX = "name";
+           });
+        }
       }
-}
      
+<b>4. src/app/app.component.html</b>
+
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <br><br><br>
+     <div class="chart center">
+        <div padding>
+           <div class="card">
+              <div class="card-header">Pie Chart</div>
+              <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                     <div id="piechart" class="piechart"></div>
+                  </li>
+              </ul>
+           </div>
+        </div>&nbsp;&nbsp;
+        <div padding>
+           <div class="card">
+              <div class="card-header">XY Chart</div>
+              <ul class="list-group list-group-flush">
+                 <li class="list-group-item">
+                    <div id="xychart" class="xychart"></div>
+                 </li>
+              </ul>
+          </div>
+       </div>   
+     </div>
+     
+<b>5. src/app/app.component.scss</b>
+
+     .chart{ display:flex; .piechart,.xychart{ width:450px; height:300px; } } 
+     .center{ display:flex; justify-content:center; align-items:center; width:100%; }    
+          
 
 ---------------------------------------------------------------------------------------------------------
 
