@@ -6,7 +6,7 @@ Using ArmChart to generate piechart & barchart, use bootstrap too
 
 <b>1. Install Node and npm</b>
 
-<b>2. Type in terminal : <b>
+<b>2. Type in terminal : </b>
   
      npm install -g @angular/cli
      ng new my-app
@@ -64,7 +64,7 @@ export class AppComponent {
     });
   }
 
-}</small
+}</small>
      
 
 ---------------------------------------------------------------------------------------------------------
