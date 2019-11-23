@@ -2,7 +2,7 @@
 
 Using ArmChart to generate piechart & barchart, use bootstrap too
 
-![alt text](https://user-images.githubusercontent.com/57636419/69019952-d72a6380-09ed-11ea-9737-0ef5e6aa33e1.JPG)
+![alt text](https://user-images.githubusercontent.com/57636419/69479704-57602700-0e3b-11ea-9102-5a702644379b.JPG)
 
 <b>1. Install Node and npm</b>
 
@@ -12,7 +12,7 @@ Using ArmChart to generate piechart & barchart, use bootstrap too
      ng new my-app
      npm install --save @amcharts/amcharts4
      
-<b>3. app.component.ts
+<b>3. app.component.ts</b>
   <small>
      import { Component, NgZone } from '@angular/core';
 
