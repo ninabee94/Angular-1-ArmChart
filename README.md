@@ -1,7 +1,5 @@
 # Armchart
 
-Using ArmChart to generate piechart & barchart, use bootstrap too
-
 ![alt text](https://user-images.githubusercontent.com/57636419/69479704-57602700-0e3b-11ea-9102-5a702644379b.JPG)
 
 <b>1. Install Node and npm</b>
