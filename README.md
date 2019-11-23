@@ -80,8 +80,8 @@ Using ArmChart to generate piechart & barchart, use bootstrap too
                     <div id="xychart" class="xychart"></div>
                  </li>
               </ul>
-          </div>
-       </div>   
+           </div>
+        </div>   
      </div>
      
 <b>5. src/app/app.component.scss</b>
